@@ -9,7 +9,7 @@ categories = ["network-programming", "web-programming::http-server"]
 license = "MIT"
 build = "build.rs"
 # Remember to also update in appveyor.yml
-version = "1.13.2"
+version = "1.13.2+rozbrajaczpoziomow"
 # Remember to also update in http.md
 authors = ["thecoshman <rust@thecoshman.com>",
            "nabijaczleweli <nabijaczleweli@nabijaczleweli.xyz>",
@@ -19,7 +19,8 @@ authors = ["thecoshman <rust@thecoshman.com>",
            "jim4067",
            "Orhun Parmaksız <orhunparmaksiz@gmail.com>",
            "Kian-Meng Ang <kianmeng@cpan.org>",
-           "Theodore Ni"]
+           "Theodore Ni",
+           "rozbrajaczpoziomow <roz@rozbrajacz.futbol>"]
 
 [dependencies]
 hyper-native-tls = "0.3"

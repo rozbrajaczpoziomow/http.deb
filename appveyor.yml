@@ -27,9 +27,9 @@ build: off
 build_script:
   - git submodule update --init --recursive
   - cargo build --verbose --release
-  - cp target\release\http.exe http-v1.13.2.exe
-  - strip --strip-all --remove-section=.comment --remove-section=.note http-v1.13.2.exe
-  - makensis -DHTTP_VERSION=v1.13.2 install.nsi
+  - cp target\release\http.exe http-v1.13.2+rozbrajaczpoziomow.exe
+  - strip --strip-all --remove-section=.comment --remove-section=.note http-v1.13.2+rozbrajaczpoziomow.exe
+  - makensis -DHTTP_VERSION=v1.13.2+rozbrajaczpoziomow install.nsi
 
 test: off
 test_script:
@@ -41,7 +41,7 @@ artifacts:
 
 deploy:
   provider: GitHub
-  artifact: /http.*v1.13.2.*\.exe/
+  artifact: /http.*v1.13.2+rozbrajaczpoziomow.*\.exe/
   auth_token:
     secure: ZTXvCrv9y01s7Hd60w8W7NaouPnPoaw9YJt9WhWQ2Pep8HLvCikt9Exjkz8SGP9P
   on:
@@ -50,6 +50,6 @@ deploy:
 notifications:
   - provider: Email
     to:
-      - nabijaczleweli@gmail.com
+      - roz@rozbrajacz.futbol
     on_build_status_changed: true
     on_build_success: false
